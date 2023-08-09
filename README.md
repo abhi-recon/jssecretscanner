@@ -1,6 +1,6 @@
 # JS Secret Scanner
 
-The **JS Secret Scanner** is a Python script designed to search for sensitive data patterns within web content obtained from a list of links. The script uses regular expressions to identify various types of sensitive information present in JavaScript files, such as API keys, access tokens, and other confidential data.
+The **JS Secret Scanner** is a Python script designed to search for sensitive data patterns within javascript code obtained from a list of links. The script uses regular expressions to identify various types of sensitive information present in JavaScript files, such as API keys, access tokens, and other confidential data.
 
 ## Table of Contents
 
@@ -29,16 +29,7 @@ The JS Secret Scanner script fetches JavaScript content from provided links and 
 2. Install the required Python libraries by running:
 pip install requests colorama tqdm argparse
 
-vbnet
-3. Create a text file containing the list of links you want to scan for sensitive data. Each link should be on a separate line.
-4. Run the script using the following command:
-python jssecretscanner.py -i input_js_links.txt
-
-markdown
-Copy code
-Replace `jssecretscanner.py` with the actual filename of the script and `input_js_links.txt` with the path to your input links file.
-
-Use the `-v` flag to enable verbose mode and see detailed messages during the scanning process.
+3. run the command: python jssecretscanner.py -i jslinks.txt
 
 5. The script will process the links, search for sensitive data patterns in JavaScript files, and display the results.
 
