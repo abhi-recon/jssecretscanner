@@ -8,7 +8,7 @@ from colorama import init, Fore, Back, Style
 from tqdm import tqdm
 import argparse
 
-init(autoreset=True)  # Initialize colorama
+init(autoreset=True)  
 
 regex_descriptions = {
     'sensitive_data' : 'sensitive data found',
@@ -106,8 +106,8 @@ def extract_matched_content(regex_list, links, verbose=False):
                     print(f"{Fore.YELLOW}No matches found in {link} for regex '{regex.pattern}'.{Style.RESET_ALL}")
         pbar.update(1)
 
-    output_file_path = "output.txt"  # Change this to your desired output file name
-    output_file = open(output_file_path, "w")  # Open output file for writing
+    output_file_path = "output.txt" 
+    output_file = open(output_file_path, "w")  
 
     with tqdm(total=len(links), desc="Progress", unit="link") as pbar:
         threads = []
@@ -127,7 +127,7 @@ def extract_matched_content(regex_list, links, verbose=False):
                 for match in matches:
                     output_file.write(f"{match}\n")
 
-    output_file.close()  # Close the output file
+    output_file.close() 
 
     return matched_content
 
@@ -148,7 +148,7 @@ if __name__ == "__main__":
         print(f"{Back.RED}{Fore.WHITE}Links file not found.{Style.RESET_ALL}")
         sys.exit(1)
 
-    # Remove leading and trailing whitespaces from each link
+   
     links = [link.strip() for link in links]
 
     matched_content = extract_matched_content(embedded_regex_patterns, links, verbose=verbose_mode)
@@ -166,7 +166,7 @@ if __name__ == "__main__":
     else:
         print(f"{Fore.YELLOW}No matches found.{Style.RESET_ALL}")
 
-    # Explicitly free up memory
+    
     matched_content = None
     gc.collect()
 
