@@ -53,6 +53,10 @@ Use the `-v` flag to enable verbose mode and see detailed messages during the sc
 1. Clone this repository:
 git clone https://github.com/abhi-recon/jssecretscanner.git
 
+2. Change directory: cd jssecretscanner
+
+3. install requirements: pip install -r requirements.txt
+
 
 ## Usage Example
 
