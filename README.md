@@ -66,10 +66,6 @@ python jssecretscanner.py -i jslinks.txt
 
 The script will start processing the links, analyzing JavaScript content, and display any matches it finds.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
 ## Created By
 Abhishek Karle
 
